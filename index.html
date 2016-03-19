@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ConFoo 2016 - Jacques Berger</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/code3.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="premiere">
+					<h3>#confoo 2016</h3>
+					<h3>Should You Maintain or Rewrite Your Legacy Web Application</h3>
+          <br/><br/>
+					<p>
+						<small>Jacques Berger</small>
+					</p>
+          <br>
+          <br>
+          <div style="text-align:center">
+            <img src="images/logo.png" style="width:100px;border:none;box-shadow:none;">
+          </div>
+				</section>
+
+        <section>
+          <h3>Goals</h3>
+          <ul>
+            <li>Evaluate if a web application should be rewritten or maintained.</li>
+            <li>Communicate guidelines to lower rewrite costs of projects.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Overview</h3>
+          <ul>
+            <li>Legacy web applications</li>
+            <li>Maintain or rewrite traditional applications</li>
+            <li>Benefits and drawbacks</li>
+            <li>Financial aspects</li>
+            <li>Other factors</li>
+            <li>Particularities with web applications</li>
+            <li>Guidelines</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>What is a legacy web application ?</h3>
+          <ul>
+            <li>A web application already deployed</li>
+            <li>Might be old</li>
+            <li>May be using outdated technologies</li>
+            <li>Seems unpleasant</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Just to make it clear</h3>
+          <p>When I talk about rewriting a software, I mean rewriting it from scratch.
+             I consider rewriting parts of the software and refactoring as maintenance activities.</p>
+        </section>
+
+        <section>
+          <h3>Should we maintain it or rewrite it ?</h3>
+          <p>The answer may vary depending on who you ask.</p>
+          <ul>
+            <li>Developers tend to rewrite.</li>
+            <li>Managers tend to maintain.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>History</h3>
+          <p>In web development history, web applications were disposable softwares. This is changing, as web applications
+            are becoming bigger and much more complex.</p>
+        </section>
+
+        <section>
+          <h3>What about traditional applications ?</h3>
+          <p>This is an old problem. Managers and developers are asking themselves this question since the beginning of software development.</p>
+        </section>
+
+        <section>
+          <h3>Benefits of maintaining the software</h3>
+          <ul>
+            <li>The application is stable.</li>
+            <li>Users are used to it.</li>
+            <li>You already know the maintenance costs.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Drawbacks of maintaining the software</h3>
+          <ul>
+            <li>In some situations, you cannot maintain anymore.</li>
+            <li>Might be less exciting for developers.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Benefits of rewriting the software</h3>
+          <ul>
+            <li>Opportunity for change (better features, better UI, newer technologies).</li>
+            <li>You know all the pitfalls from the previous development.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Drawbacks of rewriting the software</h3>
+          <ul>
+            <li>Your new application will eventually become a legacy application itself.</li>
+            <li>You will create new bugs.</li>
+            <li>You have no guarantee that the new software will be better.</li>
+            <li>You might face some resistance to change.</li>
+            <li>Looks like the initial investment is lost.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Let's talk about money !</h3>
+          <p>Costs is the most common argument used to defend this decision.</p>
+        </section>
+
+        <section>
+          <h3>How to evaluate, in terms of costs, which solution is best</h3>
+          <p>Considering that the current software is already paid</p>
+        </section>
+
+        <section>
+          <h3>Maintenance costs</h3>
+          <ul>
+            <li>AMF : Annual Maintenance Fees</li>
+            <li>ERYU : Estimated Remaining Years of Use</li>
+          </ul>
+          <p>$ = AMF * ERYU</p>
+        </section>
+
+        <section>
+          <h3>Rewrite costs</h3>
+          <ul>
+            <li>DC : Development Costs</li>
+            <li>PAMF : Projected Annual Maintenance Fees</li>
+            <li>ERYU : Estimated Remaining Years of Use</li>
+          </ul>
+          <p>$ = DC + (PAMF * ERYU)</p>
+        </section>
+
+        <section>
+          <h3>What it tells us</h3>
+          <p>The maintenance costs of the future application must be much lower
+             than the maintenance costs of the current application to worth the investment.</p>
+          <p>Conclusion: If we consider only the financial aspects, most projects will cost a lot more to rewrite than maintain.</p>
+        </section>
+
+        <section>
+          <h3>There is more than just money</h3>
+          <p>Other factors can influence your decision. Some are good, some are questionable.</p>
+        </section>
+
+        <section>
+          <h3>Good factors</h3>
+          <ul>
+            <li>You cannot access or modify the code.</li>
+            <li>Technology is unsafe or not supported anymore.</li>
+            <li>The domain changed so much that the current software is now irrelevant.</li>
+            <li>No one can read this programming language anymore.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Questionable factors</h3>
+          <ul>
+            <li>The code is difficult to maintain.</li>
+            <li>Maintenance costs are too high.</li>
+            <li>The UI is outdated or not user-friendly.</li>
+            <li>Features are unknown (lost knowledge).</li>
+            <li>The software is slow.</li>
+            <li>We are using newer technologies now.</li>
+            <li>Developers are not motivated to work in this code.</li>
+            <li>It is difficult to recruit developers knowing this stack.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>What about web applications?</h3>
+          <p>Web applications have particularities that we do not see in other types of software.</p>
+        </section>
+
+        <section>
+          <h3>Architecture</h3>
+          <p>A web application is in fact 2 applications: the frontend and the backend.</p>
+          <p>Those 2 applications are different in nature and does not evolve at the same speed.</p>
+          <p>The frontend has a lot of dependancies toward the backend and the backend does not have
+             any dependancy toward the frontend (generally).</p>
+        </section>
+
+        <section>
+          <h3>Quickly deprecated technologies</h3>
+          <p>Frontend development is filled with quickly deprecated technologies.</p>
+          <p>It is moving really fast. Technologies from 3 years ago are not used anymore.</p>
+        </section>
+
+        <section>
+          <h3>What can we do about this (for your future projects)?</h3>
+          <ul>
+            <li>Make sure that the backend is maintainable.</li>
+            <li>Make sure that the frontend is disposable, so it will not cost a lot to rewrite.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Disposable frontend</h3>
+          <ul>
+            <li>No UI logic in the backend.</li>
+            <li>Keep the business logic in the backend as much as possible.</li>
+            <li>The frontend should be as thin as possible.</li>
+            <li>Reduce coupling between the frontend and the backend by using a well defined API.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Stuck with a legacy web application that does not follow these guidelines?</h3>
+          <p>You can still maintain it.</p>
+          <p>By investing in refactoring activities, you can slowly change or rewrite
+             parts of the application to tend toward these guidelines.</p>
+          <p>You can identify parts of the code that change often and invest in these
+          parts only.</p>
+          <p><u>You do not need to refactor a feature that never change.</u></p>
+        </section>
+
+        <section>
+          <h3>Conclusion</h3>
+          <ul>
+            <li>Rewriting the frontend only might be enough for most needs.</li>
+            <li>It lowers the rewriting costs and does not void your initial investments.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Closing thought</h3>
+          <p>If you are ready to invest a large amount of money on rewriting a software,
+             why not invest in refactoring and modernization?</p>
+          <small>It might cost less.</small>
+        </section>
+
+        <section>
+          <h3>Thank you for listening!</h3>
+          <p>Any questions?</p>
+        </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+        slideNumber: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
